@@ -153,7 +153,7 @@ library(genefu)
 library(survival)
 library(survminer)
 library(ggplot2)
-
+data(pam50)
 ```
 # Examples
 
@@ -520,7 +520,7 @@ test_surv<- survival::Surv(time=test_clinic$t.rfs,event=test_clinic$e.rfs)
 
 
 #PAM50 centroids
-centroids<- genefu::pam50$centroids
+centroids<- pam50$centroids
 #Extract features from both data.frames
 inBoth<- Reduce(intersect, list(rownames(train_expression),rownames(centroids)))
 
